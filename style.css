@@ -1,0 +1,145 @@
+body {
+  background: linear-gradient(180deg, rgb(240, 92, 75), plum);
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.h1 {
+  text-align: center !important;
+  color: blue;
+}
+
+.mainParent {
+  width: 350px;
+  background: rgba(255, 255, 255, 0.3);
+  /* background: white; */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: -4px 4px 4px rgba(4, 19, 106, 0.24);
+}
+
+.result {
+  border: 2px solid rgba(0, 0, 0, 0.24);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: -4px 4px 4px rgba(4, 19, 106, 0.24);
+  font-weight: bolder;
+  font-size: 48px;
+  margin-bottom: 3rem;
+  font-family: cursive;
+  overflow: auto;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.items {
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+
+  grid-template-areas:
+    "clear clean multi divide"
+    "no7 no8 no9 minus"
+    "no4 no5 no6 plus"
+    "no1 no2 no3 ans"
+    "no0 no0 dot ans";
+}
+
+.items > button {
+  min-height: 60px;
+  border-radius: 25px;
+  border: none;
+  box-shadow: -4px 4px 5px rgba(0, 0, 0, 0.24);
+  font-size: 2rem;
+  font-weight: bolder;
+  color: rgb(255, 255, 255);
+  background: rgba(4, 19, 106, 0.404);
+  font-family: cursive;
+}
+
+.items > button:hover {
+  cursor: pointer;
+  background: rgba(83, 145, 199, 0.5);
+}
+
+.clear {
+  grid-area: clear;
+}
+.clean {
+  grid-area: clean;
+}
+.percent {
+  grid-area: percent;
+}
+.divide {
+  grid-area: divide;
+}
+.multi {
+  grid-area: multi;
+}
+.plus {
+  grid-area: plus;
+}
+.minus {
+  grid-area: minus;
+}
+.no-9 {
+  grid-area: no9;
+}
+.no-8 {
+  grid-area: no8;
+}
+.no-7 {
+  grid-area: no7;
+}
+.no-6 {
+  grid-area: no6;
+}
+.no-5 {
+  grid-area: no5;
+}
+.no-4 {
+  grid-area: no4;
+}
+.no-3 {
+  grid-area: no3;
+}
+.no-2 {
+  grid-area: no2;
+}
+.no-1 {
+  grid-area: no1;
+}
+.no-0 {
+  grid-area: no0;
+}
+.dot {
+  grid-area: dot;
+}
+.ans {
+  grid-area: ans;
+}
+
+.prank {
+  animation: shake 0.3s ease-in;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(10px);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
