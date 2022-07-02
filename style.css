@@ -1,5 +1,9 @@
 body {
-  background: linear-gradient(180deg, rgb(240, 92, 75), plum);
+  background: linear-gradient(
+    45deg,
+    rgba(224, 179, 74, 0.784),
+    rgba(164, 89, 42, 0.733)
+  );
   min-height: 100vh;
 
   display: flex;
